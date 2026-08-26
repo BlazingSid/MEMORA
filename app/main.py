@@ -14,7 +14,7 @@ from PySide6.QtWidgets import (
 )
 
 from app.database.memory_db import save_memory, get_memories
-
+from app.database.vector_memory import add_memory
 
 class MemoraWindow(QMainWindow):
 
@@ -181,7 +181,9 @@ class MemoraWindow(QMainWindow):
         if not content:
             return
 
-        save_memory(content)
+        memory_id = save_memory(content)
+
+        add_memory(memory_id, content)
 
         memory_input.clear()
 
