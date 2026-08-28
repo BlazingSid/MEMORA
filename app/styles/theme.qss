@@ -1,0 +1,325 @@
+QMainWindow {
+    background: #F4F1EB;
+}
+
+QWidget {
+    color: #24211E;
+    font-family: "Segoe UI";
+    font-size: 14px;
+}
+
+QWidget#ApplicationRoot,
+QWidget#HomeContent {
+    background: transparent;
+}
+
+QFrame#Sidebar {
+    background: #262421;
+    border: 1px solid #302D29;
+    border-radius: 28px;
+}
+
+QLabel#BrandMark {
+    background: #DD7453;
+    border-radius: 19px;
+    color: #FFFDF9;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+QLabel#Logo {
+    color: #FFFDF9;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+QPushButton#NavItem {
+    background: transparent;
+    border: none;
+    border-radius: 14px;
+    color: #BDB6AE;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 14px;
+    text-align: left;
+}
+
+QPushButton#NavItem:hover {
+    background: #34312E;
+    color: #FFFDF9;
+}
+
+QPushButton#NavItem[active="true"] {
+    background: #403C37;
+    color: #FFFDF9;
+    font-weight: 600;
+}
+
+QPushButton#NavItem:pressed {
+    background: #4A453F;
+}
+
+QPushButton#NavItem:disabled {
+    background: transparent;
+    color: #706A63;
+}
+
+QFrame#ContentShell {
+    background: #FFFEFC;
+    border: 1px solid #E9E2D9;
+    border-radius: 28px;
+}
+
+QStackedWidget#MainPages,
+QScrollArea#PageScrollArea {
+    background: transparent;
+    border: none;
+}
+
+QScrollArea#PageScrollArea > QWidget > QWidget {
+    background: transparent;
+}
+
+QLabel#PageTitle {
+    color: #24211E;
+    font-size: 31px;
+    font-weight: 700;
+}
+
+QLabel#Subtitle,
+QLabel#SectionSubtitle {
+    color: #716B64;
+    font-size: 14px;
+}
+
+QLabel#SectionTitle {
+    color: #24211E;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+QFrame#GlassCard,
+QFrame#RememberCard,
+QFrame#ChatPanel,
+QFrame#ReflectionCard,
+QFrame#StatCard,
+QFrame#MemoryCard,
+QFrame#EmptyMemoryCard {
+    background: #FFFFFF;
+    border: 1px solid #E9E2D9;
+    border-radius: 20px;
+}
+
+QFrame#RememberCard {
+    background: #F9F6F0;
+}
+
+QFrame#ChatPanel {
+    border-color: #E5DCD2;
+}
+
+QFrame#MemoryCard:hover {
+    background: #FFFDF9;
+    border: 1px solid #DED4C9;
+}
+
+QLabel#MemoryIcon {
+    background: #FCE8DF;
+    border-radius: 17px;
+    color: #C96345;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+QLabel#MemoryCategory,
+QLabel#StatLabel,
+QLabel#AssistantLabel {
+    color: #9B948C;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+QLabel#MemoryContent {
+    color: #302C28;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QLabel#MemoryTimestamp,
+QLabel#StatDetail,
+QLabel#EmptyStateDetail {
+    color: #716B64;
+    font-size: 12px;
+}
+
+QLabel#EmptyStateTitle,
+QLabel#ReflectionTitle {
+    color: #302C28;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+QLabel#StatValue {
+    color: #24211E;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+QFrame#AnswerSurface {
+    background: #F9F6F0;
+    border: 1px solid #EFE8DF;
+    border-radius: 16px;
+}
+
+QLineEdit {
+    background: #FFFFFF;
+    border: 1px solid #E1D8CE;
+    border-radius: 14px;
+    color: #24211E;
+    padding: 10px 14px;
+    selection-background-color: #F5C7B6;
+}
+
+QLineEdit:hover {
+    border-color: #D7CDC2;
+}
+
+QLineEdit:focus {
+    border: 1px solid #DD7453;
+}
+
+QLineEdit:disabled {
+    background: #F4F0EA;
+    border-color: #E9E2D9;
+    color: #9B948C;
+}
+
+QFrame#SearchBar,
+QFrame#RememberBar,
+QFrame#AskBar {
+    background: #FFFFFF;
+    border: 1px solid #E1D8CE;
+    border-radius: 16px;
+}
+
+QFrame#SearchBar:hover,
+QFrame#RememberBar:hover,
+QFrame#AskBar:hover {
+    border-color: #D7CDC2;
+}
+
+QFrame#SearchBar[focused="true"],
+QFrame#RememberBar[focused="true"],
+QFrame#AskBar[focused="true"] {
+    border: 1px solid #DD7453;
+}
+
+QLineEdit#SearchBarInput,
+QLineEdit#MemoryInput,
+QLineEdit#QuestionInput {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 9px;
+}
+
+QLineEdit#SearchBarInput:hover,
+QLineEdit#MemoryInput:hover,
+QLineEdit#QuestionInput:hover,
+QLineEdit#SearchBarInput:focus,
+QLineEdit#MemoryInput:focus,
+QLineEdit#QuestionInput:focus {
+    border: none;
+}
+
+QPushButton#SearchBarAction,
+QPushButton#RememberButton,
+QPushButton#AskButton,
+QPushButton#PrimaryButton {
+    background: #DD7453;
+    border: none;
+    border-radius: 12px;
+    color: #FFFDF9;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 76px;
+    padding: 0 16px;
+}
+
+QPushButton#SearchBarAction:hover,
+QPushButton#RememberButton:hover,
+QPushButton#AskButton:hover,
+QPushButton#PrimaryButton:hover {
+    background: #C96345;
+}
+
+QPushButton#SearchBarAction:pressed,
+QPushButton#RememberButton:pressed,
+QPushButton#AskButton:pressed,
+QPushButton#PrimaryButton:pressed {
+    background: #B9553B;
+}
+
+QPushButton#SearchBarAction:disabled,
+QPushButton#RememberButton:disabled,
+QPushButton#AskButton:disabled,
+QPushButton#PrimaryButton:disabled {
+    background: #EBC2B4;
+    color: #FFF8F4;
+}
+
+QTextEdit {
+    background: #FFFFFF;
+    border: 1px solid #E1D8CE;
+    border-radius: 14px;
+    color: #302C28;
+    padding: 12px;
+    selection-background-color: #F5C7B6;
+}
+
+QTextEdit:focus {
+    border: 1px solid #DD7453;
+}
+
+QTextEdit#AnswerBox {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 1px 0 0;
+}
+
+QTextEdit#AnswerBox:focus {
+    border: none;
+}
+
+QTextEdit:disabled {
+    background: #F4F0EA;
+    color: #9B948C;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    border: none;
+    margin: 10px 5px 10px 0;
+    width: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: #D8CFC4;
+    border-radius: 3px;
+    min-height: 26px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #C7BBAE;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+    border: none;
+}
