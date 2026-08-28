@@ -1,4 +1,4 @@
-from PySide6.QtCore import QEvent
+from PySide6.QtCore import QEvent, Qt
 from PySide6.QtWidgets import QFrame, QHBoxLayout, QLineEdit, QPushButton
 
 
@@ -23,6 +23,7 @@ class SearchBar(QFrame):
 
         self.action_button = QPushButton(action_text)
         self.action_button.setObjectName("SearchBarAction")
+        self.action_button.setCursor(Qt.CursorShape.PointingHandCursor)
         self.action_button.setMinimumHeight(40)
 
         layout.addWidget(self.input, 1)

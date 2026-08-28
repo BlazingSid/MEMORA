@@ -41,7 +41,7 @@ QPushButton#NavItem {
     color: #BDB6AE;
     font-size: 14px;
     font-weight: 500;
-    padding: 0 14px;
+    padding: 0;
     text-align: left;
 }
 
@@ -62,6 +62,45 @@ QPushButton#NavItem:pressed {
 
 QPushButton#NavItem:disabled {
     background: transparent;
+    color: #706A63;
+}
+
+QLabel#NavIcon {
+    background: #34312E;
+    border-radius: 14px;
+    color: #C9C2BA;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QLabel#NavLabel {
+    background: transparent;
+    color: #BDB6AE;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QPushButton#NavItem:hover QLabel#NavIcon {
+    background: #45413C;
+    color: #FFFDF9;
+}
+
+QPushButton#NavItem:hover QLabel#NavLabel,
+QPushButton#NavItem[active="true"] QLabel#NavLabel {
+    color: #FFFDF9;
+}
+
+QPushButton#NavItem[active="true"] QLabel#NavIcon {
+    background: #DD7453;
+    color: #FFFDF9;
+}
+
+QPushButton#NavItem:disabled QLabel#NavIcon {
+    background: #2D2A27;
+    color: #706A63;
+}
+
+QPushButton#NavItem:disabled QLabel#NavLabel {
     color: #706A63;
 }
 
