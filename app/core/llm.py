@@ -11,6 +11,11 @@ def generate_response(prompt: str) -> str:
         "model": MODEL_NAME,
         "prompt": prompt,
         "stream": False,
+        "keep_alive": "10m",
+        "options": {
+            "num_predict": 150,
+            "temperature": 0.2,
+        },
     }
 
     request = Request(
@@ -23,6 +28,8 @@ def generate_response(prompt: str) -> str:
     )
 
     with urlopen(request) as response:
-        data = json.loads(response.read().decode("utf-8"))
+        data = json.loads(
+            response.read().decode("utf-8")
+        )
 
     return data["response"].strip()
