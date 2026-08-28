@@ -42,7 +42,7 @@ class MemoraWindow(QMainWindow):
 
         sidebar = QFrame()
         sidebar.setObjectName("Sidebar")
-        sidebar.setFixedWidth(244)
+        sidebar.setFixedWidth(228)
         apply_soft_shadow(sidebar, blur_radius=28, offset_y=7)
 
         sidebar_layout = QVBoxLayout(sidebar)

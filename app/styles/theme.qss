@@ -1,9 +1,9 @@
 QMainWindow {
-    background: #F4F1EB;
+    background: #F3F2EF;
 }
 
 QWidget {
-    color: #24211E;
+    color: #171717;
     font-family: "Segoe UI";
     font-size: 14px;
 }
@@ -14,21 +14,21 @@ QWidget#HomeContent {
 }
 
 QFrame#Sidebar {
-    background: #262421;
-    border: 1px solid #302D29;
+    background: #252525;
+    border: 1px solid #303030;
     border-radius: 28px;
 }
 
 QLabel#BrandMark {
-    background: #DD7453;
+    background: #E87550;
     border-radius: 19px;
-    color: #FFFDF9;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: 700;
 }
 
 QLabel#Logo {
-    color: #FFFDF9;
+    color: #FFFFFF;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -38,7 +38,7 @@ QPushButton#NavItem {
     background: transparent;
     border: none;
     border-radius: 14px;
-    color: #BDB6AE;
+    color: #BDBDBD;
     font-size: 14px;
     font-weight: 500;
     padding: 0;
@@ -46,18 +46,18 @@ QPushButton#NavItem {
 }
 
 QPushButton#NavItem:hover {
-    background: #34312E;
-    color: #FFFDF9;
+    background: #333333;
+    color: #FFFFFF;
 }
 
 QPushButton#NavItem[active="true"] {
-    background: #403C37;
-    color: #FFFDF9;
+    background: #3A3A3A;
+    color: #FFFFFF;
     font-weight: 600;
 }
 
 QPushButton#NavItem:pressed {
-    background: #4A453F;
+    background: #454545;
 }
 
 QPushButton#NavItem:disabled {
@@ -66,33 +66,33 @@ QPushButton#NavItem:disabled {
 }
 
 QLabel#NavIcon {
-    background: #34312E;
+    background: #333333;
     border-radius: 14px;
-    color: #C9C2BA;
+    color: #C8C8C8;
     font-size: 13px;
     font-weight: 600;
 }
 
 QLabel#NavLabel {
     background: transparent;
-    color: #BDB6AE;
+    color: #BDBDBD;
     font-size: 14px;
     font-weight: 500;
 }
 
 QPushButton#NavItem:hover QLabel#NavIcon {
-    background: #45413C;
-    color: #FFFDF9;
+    background: #454545;
+    color: #FFFFFF;
 }
 
 QPushButton#NavItem:hover QLabel#NavLabel,
 QPushButton#NavItem[active="true"] QLabel#NavLabel {
-    color: #FFFDF9;
+    color: #FFFFFF;
 }
 
 QPushButton#NavItem[active="true"] QLabel#NavIcon {
-    background: #DD7453;
-    color: #FFFDF9;
+    background: #E87550;
+    color: #FFFFFF;
 }
 
 QPushButton#NavItem:disabled QLabel#NavIcon {
@@ -105,8 +105,8 @@ QPushButton#NavItem:disabled QLabel#NavLabel {
 }
 
 QFrame#ContentShell {
-    background: #FFFEFC;
-    border: 1px solid #E9E2D9;
+    background: #FFFFFF;
+    border: 1px solid #E5E3DF;
     border-radius: 28px;
 }
 
@@ -121,19 +121,24 @@ QScrollArea#PageScrollArea > QWidget > QWidget {
 }
 
 QLabel#PageTitle {
-    color: #24211E;
-    font-size: 31px;
+    color: #171717;
+    font-size: 30px;
     font-weight: 700;
 }
 
 QLabel#Subtitle,
 QLabel#SectionSubtitle {
-    color: #716B64;
+    color: #777777;
     font-size: 14px;
 }
 
+QLabel#CaptureHint {
+    color: #A0A0A0;
+    font-size: 12px;
+}
+
 QLabel#SectionTitle {
-    color: #24211E;
+    color: #171717;
     font-size: 18px;
     font-weight: 600;
 }
@@ -146,42 +151,41 @@ QFrame#StatCard,
 QFrame#MemoryCard,
 QFrame#EmptyMemoryCard {
     background: #FFFFFF;
-    border: 1px solid #E9E2D9;
+    border: 1px solid #E5E3DF;
     border-radius: 20px;
 }
 
 QFrame#RememberCard {
-    background: #F9F6F0;
+    background: #F8F7F4;
 }
 
 QFrame#ChatPanel {
-    border-color: #E5DCD2;
+    border-color: #E5E3DF;
 }
 
 QFrame#MemoryCard:hover {
-    background: #FFFDF9;
-    border: 1px solid #DED4C9;
+    background: #FFFFFF;
+    border: 1px solid #DCD7D0;
 }
 
 QLabel#MemoryIcon {
-    background: #FCE8DF;
+    background: #FCE9E2;
     border-radius: 17px;
-    color: #C96345;
+    color: #D96542;
     font-size: 12px;
     font-weight: 700;
 }
 
-QLabel#MemoryCategory,
 QLabel#StatLabel,
 QLabel#AssistantLabel {
-    color: #9B948C;
+    color: #A0A0A0;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 QLabel#MemoryContent {
-    color: #302C28;
+    color: #171717;
     font-size: 14px;
     font-weight: 500;
 }
@@ -189,70 +193,70 @@ QLabel#MemoryContent {
 QLabel#MemoryTimestamp,
 QLabel#StatDetail,
 QLabel#EmptyStateDetail {
-    color: #716B64;
+    color: #777777;
     font-size: 12px;
 }
 
 QLabel#EmptyStateTitle,
 QLabel#ReflectionTitle {
-    color: #302C28;
+    color: #171717;
     font-size: 15px;
     font-weight: 600;
 }
 
 QLabel#StatValue {
-    color: #24211E;
+    color: #171717;
     font-size: 26px;
     font-weight: 700;
 }
 
 QFrame#AnswerSurface {
-    background: #F9F6F0;
-    border: 1px solid #EFE8DF;
+    background: #F8F7F4;
+    border: 1px solid #E5E3DF;
     border-radius: 16px;
 }
 
 QLineEdit {
     background: #FFFFFF;
-    border: 1px solid #E1D8CE;
+    border: 1px solid #E5E3DF;
     border-radius: 14px;
-    color: #24211E;
+    color: #171717;
     padding: 10px 14px;
     selection-background-color: #F5C7B6;
 }
 
 QLineEdit:hover {
-    border-color: #D7CDC2;
+    border-color: #DCD7D0;
 }
 
 QLineEdit:focus {
-    border: 1px solid #DD7453;
+    border: 1px solid #E87550;
 }
 
 QLineEdit:disabled {
-    background: #F4F0EA;
-    border-color: #E9E2D9;
-    color: #9B948C;
+    background: #F8F7F4;
+    border-color: #E5E3DF;
+    color: #A0A0A0;
 }
 
 QFrame#SearchBar,
 QFrame#RememberBar,
 QFrame#AskBar {
     background: #FFFFFF;
-    border: 1px solid #E1D8CE;
+    border: 1px solid #E5E3DF;
     border-radius: 16px;
 }
 
 QFrame#SearchBar:hover,
 QFrame#RememberBar:hover,
 QFrame#AskBar:hover {
-    border-color: #D7CDC2;
+    border-color: #DCD7D0;
 }
 
 QFrame#SearchBar[focused="true"],
 QFrame#RememberBar[focused="true"],
 QFrame#AskBar[focused="true"] {
-    border: 1px solid #DD7453;
+    border: 1px solid #E87550;
 }
 
 QLineEdit#SearchBarInput,
@@ -277,10 +281,10 @@ QPushButton#SearchBarAction,
 QPushButton#RememberButton,
 QPushButton#AskButton,
 QPushButton#PrimaryButton {
-    background: #DD7453;
+    background: #E87550;
     border: none;
     border-radius: 12px;
-    color: #FFFDF9;
+    color: #FFFFFF;
     font-size: 13px;
     font-weight: 600;
     min-width: 76px;
@@ -291,7 +295,7 @@ QPushButton#SearchBarAction:hover,
 QPushButton#RememberButton:hover,
 QPushButton#AskButton:hover,
 QPushButton#PrimaryButton:hover {
-    background: #C96345;
+    background: #D96542;
 }
 
 QPushButton#SearchBarAction:pressed,
@@ -311,15 +315,15 @@ QPushButton#PrimaryButton:disabled {
 
 QTextEdit {
     background: #FFFFFF;
-    border: 1px solid #E1D8CE;
+    border: 1px solid #E5E3DF;
     border-radius: 14px;
-    color: #302C28;
+    color: #171717;
     padding: 12px;
     selection-background-color: #F5C7B6;
 }
 
 QTextEdit:focus {
-    border: 1px solid #DD7453;
+    border: 1px solid #E87550;
 }
 
 QTextEdit#AnswerBox {
@@ -334,8 +338,8 @@ QTextEdit#AnswerBox:focus {
 }
 
 QTextEdit:disabled {
-    background: #F4F0EA;
-    color: #9B948C;
+    background: #F8F7F4;
+    color: #A0A0A0;
 }
 
 QScrollBar:vertical {
@@ -346,13 +350,13 @@ QScrollBar:vertical {
 }
 
 QScrollBar::handle:vertical {
-    background: #D8CFC4;
+    background: #D8D4CE;
     border-radius: 3px;
     min-height: 26px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: #C7BBAE;
+    background: #C6C0B8;
 }
 
 QScrollBar::add-line:vertical,

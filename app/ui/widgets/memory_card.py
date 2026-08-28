@@ -10,7 +10,7 @@ class MemoryCard(QFrame):
 
         self.setObjectName("MemoryCard")
         self.setAttribute(Qt.WidgetAttribute.WA_Hover, True)
-        self.setMinimumHeight(118)
+        self.setMinimumHeight(108)
 
         layout = QHBoxLayout(self)
         layout.setContentsMargins(18, 17, 18, 17)
@@ -24,11 +24,7 @@ class MemoryCard(QFrame):
 
         text_layout = QVBoxLayout()
         text_layout.setContentsMargins(0, 0, 0, 0)
-        text_layout.setSpacing(7)
-
-        category = QLabel("MEMORY")
-        category.setObjectName("MemoryCategory")
-        text_layout.addWidget(category)
+        text_layout.setSpacing(8)
 
         self.content_label = QLabel(content)
         self.content_label.setObjectName("MemoryContent")

@@ -12,7 +12,7 @@ class StatCard(QFrame):
         super().__init__(parent)
 
         self.setObjectName("StatCard")
-        self.setMinimumHeight(136)
+        self.setMinimumHeight(124)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(19, 18, 19, 18)
