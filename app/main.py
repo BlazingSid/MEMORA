@@ -20,6 +20,7 @@ from app.database.vector_memory import (
     search_memory_documents,
 )
 from app.core.rag import ask_memora as rag_ask
+from app.core.llm_worker import LLMWorker
 
 
 class MemoraWindow(QMainWindow):
@@ -664,12 +665,43 @@ class MemoraWindow(QMainWindow):
             "MEMORA is thinking..."
         )
 
-        answer = rag_ask(
+        self.question_input.setEnabled(False)
+
+    # Create background worker
+
+        self.llm_worker = LLMWorker(
             question
         )
 
+        self.llm_worker.finished.connect(
+            self.handle_llm_response
+        )
+
+        self.llm_worker.error.connect(
+            self.handle_llm_error
+        )
+
+        self.llm_worker.start()
+
+    def handle_llm_response(self, answer):
+
         self.answer_box.setPlainText(
             answer
+        )
+
+        self.question_input.setEnabled(
+            True
+        )
+
+
+    def handle_llm_error(self, error):
+
+        self.answer_box.setPlainText(
+            f"MEMORA encountered an error:\n\n{error}"
+        )
+
+        self.question_input.setEnabled(
+            True
         )
 
 
