@@ -15,6 +15,7 @@ from PySide6.QtWidgets import (
 )
 
 from app.database.memory_db import get_memories
+from app.ui.widgets.memory_card import MemoryCard
 from app.styles.fonts import FONT_FAMILY, FONT_WEIGHT_BOLD, TITLE_SIZE
 from app.ui.widgets.chat_panel import ChatPanel
 from app.ui.widgets.glass_card import GlassCard

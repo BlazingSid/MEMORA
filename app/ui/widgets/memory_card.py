@@ -1,38 +1,88 @@
+from PySide6.QtWidgets import (
+    QFrame,
+    QLabel,
+    QVBoxLayout,
+    QHBoxLayout,
+)
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QFrame, QHBoxLayout, QLabel, QVBoxLayout
+
+from app.ui.utils.time_utils import relative_time
 
 
 class MemoryCard(QFrame):
-    """A compact memory preview made from content returned by the existing DB."""
 
-    def __init__(self, content, created_at, parent=None):
+    def __init__(
+        self,
+        content: str,
+        timestamp: str,
+        parent=None,
+    ):
         super().__init__(parent)
 
         self.setObjectName("MemoryCard")
-        self.setAttribute(Qt.WidgetAttribute.WA_Hover, True)
-        self.setMinimumHeight(108)
 
-        layout = QHBoxLayout(self)
-        layout.setContentsMargins(18, 17, 18, 17)
-        layout.setSpacing(13)
+        self.setMinimumHeight(130)
 
-        icon = QLabel("M")
-        icon.setObjectName("MemoryIcon")
-        icon.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        icon.setFixedSize(34, 34)
-        layout.addWidget(icon, 0, Qt.AlignmentFlag.AlignTop)
+        layout = QVBoxLayout(self)
 
-        text_layout = QVBoxLayout()
-        text_layout.setContentsMargins(0, 0, 0, 0)
-        text_layout.setSpacing(8)
+        layout.setContentsMargins(
+            20, 18, 20, 16
+        )
 
-        self.content_label = QLabel(content)
-        self.content_label.setObjectName("MemoryContent")
-        self.content_label.setWordWrap(True)
-        text_layout.addWidget(self.content_label)
+        layout.setSpacing(10)
 
-        self.timestamp_label = QLabel(str(created_at))
-        self.timestamp_label.setObjectName("MemoryTimestamp")
-        text_layout.addWidget(self.timestamp_label)
+        # ---------------------------------
+        # Header
+        # ---------------------------------
 
-        layout.addLayout(text_layout, 1)
+        header = QHBoxLayout()
+
+        icon = QLabel("🧠")
+
+        icon.setObjectName(
+            "MemoryIcon"
+        )
+
+        header.addWidget(icon)
+
+        label = QLabel("MEMORY")
+
+        label.setObjectName(
+            "MemoryLabel"
+        )
+
+        header.addWidget(label)
+
+        header.addStretch()
+
+        time = QLabel(
+            relative_time(timestamp)
+        )
+
+        time.setObjectName(
+            "MemoryTime"
+        )
+
+        header.addWidget(time)
+
+        layout.addLayout(header)
+
+        # ---------------------------------
+        # Content
+        # ---------------------------------
+
+        text = QLabel(content)
+
+        text.setObjectName(
+            "MemoryContent"
+        )
+
+        text.setWordWrap(True)
+
+        text.setTextInteractionFlags(
+            Qt.TextSelectableByMouse
+        )
+
+        layout.addWidget(text)
+
+        layout.addStretch()
